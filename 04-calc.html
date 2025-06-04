@@ -37,7 +37,9 @@
     </style>
   </head>
 
-  <body class="text-(--text) font-{--font-sans}">
+  <body
+    class="min-h-screen bg-linear-[180deg,_#807ECE_0%,_#8E7ECE_100%] text-(--text) font-{--font-sans}"
+  >
     <div id="root"></div>
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -209,7 +211,14 @@
       }
       function App() {
         return (
-          <main className="py-28 px-4">
+          <main
+            className={`
+            py-28 px-4 sm:px-10
+            flex flex-col sm:flex-row
+            items-center sm:items-stretch
+            gap-2
+            `}
+          >
             <Calculator />
             <OperationHistory />
           </main>
